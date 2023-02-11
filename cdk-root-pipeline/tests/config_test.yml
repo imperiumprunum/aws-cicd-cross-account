@@ -1,4 +1,5 @@
 setup:
   region: 'eu-central-1'
 resources:
-  code_commit: 'bootstrap'
+  code_commit:
+    name: 'bootstrap'

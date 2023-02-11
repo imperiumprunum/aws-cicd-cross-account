@@ -6,12 +6,14 @@ import cdk_root_pipeline.constants as constants
 
 
 class ComponentConfig:
+    PROJECT_NAME = None
 
     def __init__(self, config_path: Optional[str] = constants.DEFAULT_COMPONENT_CONFIG_PATH) -> None:
         self.config_path = config_path
         self.content = self.load_cfg(self.config_path)
 
         self.setup = self.content.get("setup")
+        ComponentConfig.PROJECT_NAME = self.setup["project_name"]
         self.resources = self.content.get("resources")
 
     def load_cfg(self, config_path: str):

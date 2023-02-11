@@ -9,14 +9,21 @@ from aws_cdk import (
 from constructs import Construct
 
 from cdk_root_pipeline.component_config import ComponentConfig
+import cdk_root_pipeline.utils as utils
 
 
 class CdkRootPipelineStack(Stack):
 
     def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)
-
-        # The code that defines your stack goes here
+        root_repo = self.create_code_commit(
+            resource_id='xx',
+            repo_name='xx'
+        )
+        self.__init_pipeline(
+            component='x',
+            repo=root_repo
+        )
 
         # =====================END OF INIT=======================================
 
@@ -28,6 +35,17 @@ class CdkRootPipelineStack(Stack):
             description=f"Bootstrap CodeCommit repository.",
         )
         return my_repo
+
+    def __init_pipeline_2(
+            self, component: ComponentConfig, repo: aws_codecommit.Repository
+    ) -> None:
+        # Create pipeline
+        pipeline = aws_codepipeline.Pipeline(
+            self,
+            id=component.get_resource_name(resource_type="pipeline"),
+            pipeline_name=component.get_resource_name(resource_type="pipeline"),
+            cross_account_keys=False,
+        )
 
     def __init_pipeline(
             self, component: ComponentConfig, repo: aws_codecommit.Repository
