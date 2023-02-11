@@ -4,17 +4,42 @@
     "id": "App",
     "path": "",
     "children": {
-      "CdkRootPipelineStack": {
-        "id": "CdkRootPipelineStack",
-        "path": "CdkRootPipelineStack",
+      "RootPipelineStack": {
+        "id": "RootPipelineStack",
+        "path": "RootPipelineStack",
         "children": {
+          "rootbootstrap-repo-thy": {
+            "id": "rootbootstrap-repo-thy",
+            "path": "RootPipelineStack/rootbootstrap-repo-thy",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "RootPipelineStack/rootbootstrap-repo-thy/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::CodeCommit::Repository",
+                  "aws:cdk:cloudformation:props": {
+                    "repositoryName": "rootbootstrap-repo-thy",
+                    "repositoryDescription": "Bootstrap CodeCommit repository."
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_codecommit.CfnRepository",
+                  "version": "2.63.2"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_codecommit.Repository",
+              "version": "2.63.2"
+            }
+          },
           "CDKMetadata": {
             "id": "CDKMetadata",
-            "path": "CdkRootPipelineStack/CDKMetadata",
+            "path": "RootPipelineStack/CDKMetadata",
             "children": {
               "Default": {
                 "id": "Default",
-                "path": "CdkRootPipelineStack/CDKMetadata/Default",
+                "path": "RootPipelineStack/CDKMetadata/Default",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnResource",
                   "version": "2.63.2"
@@ -22,7 +47,7 @@
               },
               "Condition": {
                 "id": "Condition",
-                "path": "CdkRootPipelineStack/CDKMetadata/Condition",
+                "path": "RootPipelineStack/CDKMetadata/Condition",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnCondition",
                   "version": "2.63.2"
@@ -36,7 +61,7 @@
           },
           "BootstrapVersion": {
             "id": "BootstrapVersion",
-            "path": "CdkRootPipelineStack/BootstrapVersion",
+            "path": "RootPipelineStack/BootstrapVersion",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnParameter",
               "version": "2.63.2"
@@ -44,7 +69,7 @@
           },
           "CheckBootstrapVersion": {
             "id": "CheckBootstrapVersion",
-            "path": "CdkRootPipelineStack/CheckBootstrapVersion",
+            "path": "RootPipelineStack/CheckBootstrapVersion",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnRule",
               "version": "2.63.2"

@@ -1,27 +1,27 @@
 {
   "version": "29.0.0",
   "artifacts": {
-    "CdkRootPipelineStack.assets": {
+    "RootPipelineStack.assets": {
       "type": "cdk:asset-manifest",
       "properties": {
-        "file": "CdkRootPipelineStack.assets.json",
+        "file": "RootPipelineStack.assets.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
       }
     },
-    "CdkRootPipelineStack": {
+    "RootPipelineStack": {
       "type": "aws:cloudformation:stack",
       "environment": "aws://unknown-account/unknown-region",
       "properties": {
-        "templateFile": "CdkRootPipelineStack.template.json",
+        "templateFile": "RootPipelineStack.template.json",
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/36bf84eb052675501f06e4e79c766b0d5140c77a1ee601b7f0177002e16c9251.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/f3c32c83d622a0b017145cbb3cd5b9b6073ec77dae30b940f02aed4abf0bdeb3.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
-          "CdkRootPipelineStack.assets"
+          "RootPipelineStack.assets"
         ],
         "lookupRole": {
           "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
@@ -30,35 +30,41 @@
         }
       },
       "dependencies": [
-        "CdkRootPipelineStack.assets"
+        "RootPipelineStack.assets"
       ],
       "metadata": {
-        "/CdkRootPipelineStack/CDKMetadata/Default": [
+        "/RootPipelineStack/rootbootstrap-repo-thy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "rootbootstraprepothy5ABDA899"
+          }
+        ],
+        "/RootPipelineStack/CDKMetadata/Default": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadata"
           }
         ],
-        "/CdkRootPipelineStack/CDKMetadata/Condition": [
+        "/RootPipelineStack/CDKMetadata/Condition": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadataAvailable"
           }
         ],
-        "/CdkRootPipelineStack/BootstrapVersion": [
+        "/RootPipelineStack/BootstrapVersion": [
           {
             "type": "aws:cdk:logicalId",
             "data": "BootstrapVersion"
           }
         ],
-        "/CdkRootPipelineStack/CheckBootstrapVersion": [
+        "/RootPipelineStack/CheckBootstrapVersion": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CheckBootstrapVersion"
           }
         ]
       },
-      "displayName": "CdkRootPipelineStack"
+      "displayName": "RootPipelineStack"
     },
     "Tree": {
       "type": "cdk:tree",

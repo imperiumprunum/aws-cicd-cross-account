@@ -1,5 +1,3 @@
-from typing import Optional
-
 import yaml
 
 import cdk_root_pipeline.constants as constants
@@ -8,8 +6,8 @@ import cdk_root_pipeline.constants as constants
 class ComponentConfig:
     PROJECT_NAME = None
 
-    def __init__(self, config_path: Optional[str] = constants.DEFAULT_COMPONENT_CONFIG_PATH) -> None:
-        self.config_path = config_path
+    def __init__(self) -> None:
+        self.config_path = constants.DEFAULT_COMPONENT_CONFIG_PATH
         self.content = self.load_cfg(self.config_path)
 
         self.setup = self.content.get("setup")
@@ -37,3 +35,7 @@ class ComponentConfig:
 class InvalidConfigFileException(Exception):
     def __init__(self):
         super().__init__()
+
+
+# enforce ComponentConfig.PROJECT_NAME on import
+cc = ComponentConfig()

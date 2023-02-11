@@ -5,8 +5,6 @@ from aws_cdk import Tags
 import cdk_root_pipeline.constants as constants
 from cdk_root_pipeline.component_config import ComponentConfig
 
-cc = ComponentConfig()
-
 
 def get_resource_name(
         resource_name: str,
