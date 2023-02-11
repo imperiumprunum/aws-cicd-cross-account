@@ -17,7 +17,7 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/f3c32c83d622a0b017145cbb3cd5b9b6073ec77dae30b940f02aed4abf0bdeb3.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/cecae603e04e4f164cac1c35edf02fd09bb2ca7e7ad4a07c7f7bed7228eff22c.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -37,6 +37,96 @@
           {
             "type": "aws:cdk:logicalId",
             "data": "rootbootstraprepothy5ABDA899"
+          }
+        ],
+        "/RootPipelineStack/rootbootstrap-repo-thy/RootPipelineStackrootbootstrappipelinethyDBA3C33AEventRule/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "rootbootstraprepothyRootPipelineStackrootbootstrappipelinethyDBA3C33AEventRule6267792B"
+          }
+        ],
+        "/RootPipelineStack/rootbootstrap-pipeline-thy/ArtifactsBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "rootbootstrappipelinethyArtifactsBucketE8FC4411"
+          }
+        ],
+        "/RootPipelineStack/rootbootstrap-pipeline-thy/ArtifactsBucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "rootbootstrappipelinethyArtifactsBucketPolicyD264828E"
+          }
+        ],
+        "/RootPipelineStack/rootbootstrap-pipeline-thy/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "rootbootstrappipelinethyRole6567298B"
+          }
+        ],
+        "/RootPipelineStack/rootbootstrap-pipeline-thy/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "rootbootstrappipelinethyRoleDefaultPolicyD77981B9"
+          }
+        ],
+        "/RootPipelineStack/rootbootstrap-pipeline-thy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "rootbootstrappipelinethy212D06C0"
+          }
+        ],
+        "/RootPipelineStack/rootbootstrap-pipeline-thy/Source/master-on-commit/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "rootbootstrappipelinethySourcemasteroncommitCodePipelineActionRoleFF4F6902"
+          }
+        ],
+        "/RootPipelineStack/rootbootstrap-pipeline-thy/Source/master-on-commit/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "rootbootstrappipelinethySourcemasteroncommitCodePipelineActionRoleDefaultPolicy3A71EC60"
+          }
+        ],
+        "/RootPipelineStack/rootbootstrap-pipeline-thy/EventsRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "rootbootstrappipelinethyEventsRole844293BE"
+          }
+        ],
+        "/RootPipelineStack/rootbootstrap-pipeline-thy/EventsRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "rootbootstrappipelinethyEventsRoleDefaultPolicyB1340231"
+          }
+        ],
+        "/RootPipelineStack/rootbootstrap-pipeline-thy/Build/CodeBuild/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "rootbootstrappipelinethyBuildCodeBuildCodePipelineActionRoleAAEB4925"
+          }
+        ],
+        "/RootPipelineStack/rootbootstrap-pipeline-thy/Build/CodeBuild/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "rootbootstrappipelinethyBuildCodeBuildCodePipelineActionRoleDefaultPolicyF501C0BC"
+          }
+        ],
+        "/RootPipelineStack/rootbootstrap-cb-thy/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "rootbootstrapcbthyRoleB6A413F7"
+          }
+        ],
+        "/RootPipelineStack/rootbootstrap-cb-thy/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "rootbootstrapcbthyRoleDefaultPolicy7EF793E4"
+          }
+        ],
+        "/RootPipelineStack/rootbootstrap-cb-thy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "rootbootstrapcbthyD2B5E7A1"
           }
         ],
         "/RootPipelineStack/CDKMetadata/Default": [

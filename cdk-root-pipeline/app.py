@@ -3,7 +3,7 @@ import os
 
 import aws_cdk as cdk
 
-from cdk_root_pipeline.component_config import ComponentConfig
+#from cdk_root_pipeline.component_config import ComponentConfig
 from cdk_root_pipeline.cdk_root_pipeline_stack import CdkRootPipelineStack
 
 app = cdk.App()

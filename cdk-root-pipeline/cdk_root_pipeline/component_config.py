@@ -5,6 +5,7 @@ import cdk_root_pipeline.constants as constants
 
 class ComponentConfig:
     PROJECT_NAME = None
+    DEFAULT_BRANCH_NAME = None
 
     def __init__(self) -> None:
         self.config_path = constants.DEFAULT_COMPONENT_CONFIG_PATH
@@ -12,6 +13,7 @@ class ComponentConfig:
 
         self.setup = self.content.get("setup")
         ComponentConfig.PROJECT_NAME = self.setup["project_name"]
+        ComponentConfig.DEFAULT_BRANCH_NAME = self.setup["default_branch_name"]
         self.resources = self.content.get("resources")
 
     def load_cfg(self, config_path: str):
