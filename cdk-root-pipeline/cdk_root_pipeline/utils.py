@@ -3,7 +3,7 @@ from typing import Optional
 from aws_cdk import Tags
 
 import cdk_root_pipeline.constants as constants
-from cdk_root_pipeline.component_config import ComponentConfig
+from cdk_root_pipeline.config_loader import ConfigLoader
 
 
 def get_resource_name(
@@ -11,7 +11,7 @@ def get_resource_name(
         resource_type: str,
         environment: Optional[str] = None,
         component_name: Optional[str] = None,
-        project_name: Optional[str] = ComponentConfig.PROJECT_NAME, ):
+        project_name: Optional[str] = ConfigLoader.PROJECT_NAME, ):
     if not environment and not component_name:
         return f"{resource_name}-{resource_type}-{project_name}"
     if component_name:
@@ -21,7 +21,7 @@ def get_resource_name(
 
 def get_resource_name_OLD(self, resource_type: str, resource_name: str = None):
     if not self.environment:
-        raise ComponentConfigExceptions(
+        raise ConfigLoaderExceptions(
             f'Method get_resource_name requires parameter environment not equal to {self.environment}')
     if not resource_name and self.environment == 'global':
         # ex. ingestion-codecommit-thy, ingestion-YY-lambda-thy
@@ -34,7 +34,7 @@ def get_resource_name_OLD(self, resource_type: str, resource_name: str = None):
         return f"{self.environment}-{self.component_name}-{resource_name}-{resource_type}-{self.project_name}"
 
 
-class ComponentConfigExceptions(Exception):
+class ConfigLoaderExceptions(Exception):
     def __init__(self, msg: str):
         self.msg = msg
 

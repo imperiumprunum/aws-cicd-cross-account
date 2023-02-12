@@ -10,7 +10,7 @@ from aws_cdk import (
 )
 from constructs import Construct
 
-from cdk_root_pipeline.component_config import ComponentConfig
+from cdk_root_pipeline.config_loader import ConfigLoader
 import cdk_root_pipeline.utils as utils
 import cdk_root_pipeline.constants as constants
 
@@ -101,8 +101,8 @@ class CdkRootPipelineStack(Stack):
         source_output = aws_codepipeline.Artifact("SourceArtifact")
 
         source_action = aws_codepipeline_actions.CodeCommitSourceAction(
-            action_name=f"{ComponentConfig.DEFAULT_BRANCH_NAME}-on-commit",
-            branch=ComponentConfig.DEFAULT_BRANCH_NAME,
+            action_name=f"{ConfigLoader.DEFAULT_BRANCH_NAME}-on-commit",
+            branch=ConfigLoader.DEFAULT_BRANCH_NAME,
             repository=repo,
             output=source_output,
         )

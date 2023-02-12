@@ -3,7 +3,7 @@ import yaml
 import cdk_root_pipeline.constants as constants
 
 
-class ComponentConfig:
+class ConfigLoader:
     PROJECT_NAME = None
     DEFAULT_BRANCH_NAME = None
 
@@ -12,8 +12,8 @@ class ComponentConfig:
         self.content = self.load_cfg(self.config_path)
 
         self.setup = self.content.get("setup")
-        ComponentConfig.PROJECT_NAME = self.setup["project_name"]
-        ComponentConfig.DEFAULT_BRANCH_NAME = self.setup["default_branch_name"]
+        ConfigLoader.PROJECT_NAME = self.setup["project_name"]
+        ConfigLoader.DEFAULT_BRANCH_NAME = self.setup["default_branch_name"]
         self.resources = self.content.get("resources")
 
     def load_cfg(self, config_path: str):
@@ -39,5 +39,5 @@ class InvalidConfigFileException(Exception):
         super().__init__()
 
 
-# enforce ComponentConfig.PROJECT_NAME on import
-cc = ComponentConfig()
+# enforce ConfigLoader.PROJECT_NAME on import
+cc = ConfigLoader()
