@@ -15,7 +15,7 @@ import cdk_root_pipeline.utils as utils
 import cdk_root_pipeline.constants as constants
 
 
-class CdkRootPipelineStack(Stack):
+class RootPipeline(Stack):
 
     def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)

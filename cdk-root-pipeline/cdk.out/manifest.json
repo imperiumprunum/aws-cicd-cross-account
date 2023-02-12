@@ -1,27 +1,27 @@
 {
   "version": "29.0.0",
   "artifacts": {
-    "RootPipelineStack.assets": {
+    "RootPipeline.assets": {
       "type": "cdk:asset-manifest",
       "properties": {
-        "file": "RootPipelineStack.assets.json",
+        "file": "RootPipeline.assets.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
       }
     },
-    "RootPipelineStack": {
+    "RootPipeline": {
       "type": "aws:cloudformation:stack",
       "environment": "aws://unknown-account/unknown-region",
       "properties": {
-        "templateFile": "RootPipelineStack.template.json",
+        "templateFile": "RootPipeline.template.json",
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/cecae603e04e4f164cac1c35edf02fd09bb2ca7e7ad4a07c7f7bed7228eff22c.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/8a9a20d9a3841ef6790ffd7d4f5a02c7912bbacb9bb57b37e31fe599b419ab81.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
-          "RootPipelineStack.assets"
+          "RootPipeline.assets"
         ],
         "lookupRole": {
           "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
@@ -30,131 +30,131 @@
         }
       },
       "dependencies": [
-        "RootPipelineStack.assets"
+        "RootPipeline.assets"
       ],
       "metadata": {
-        "/RootPipelineStack/rootbootstrap-repo-thy/Resource": [
+        "/RootPipeline/rootbootstrap-repo-thy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "rootbootstraprepothy5ABDA899"
           }
         ],
-        "/RootPipelineStack/rootbootstrap-repo-thy/RootPipelineStackrootbootstrappipelinethyDBA3C33AEventRule/Resource": [
+        "/RootPipeline/rootbootstrap-repo-thy/RootPipelinerootbootstrappipelinethyE6CCCCF2EventRule/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "rootbootstraprepothyRootPipelineStackrootbootstrappipelinethyDBA3C33AEventRule6267792B"
+            "data": "rootbootstraprepothyRootPipelinerootbootstrappipelinethyE6CCCCF2EventRuleBD681C53"
           }
         ],
-        "/RootPipelineStack/rootbootstrap-pipeline-thy/ArtifactsBucket/Resource": [
+        "/RootPipeline/rootbootstrap-pipeline-thy/ArtifactsBucket/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "rootbootstrappipelinethyArtifactsBucketE8FC4411"
           }
         ],
-        "/RootPipelineStack/rootbootstrap-pipeline-thy/ArtifactsBucket/Policy/Resource": [
+        "/RootPipeline/rootbootstrap-pipeline-thy/ArtifactsBucket/Policy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "rootbootstrappipelinethyArtifactsBucketPolicyD264828E"
           }
         ],
-        "/RootPipelineStack/rootbootstrap-pipeline-thy/Role/Resource": [
+        "/RootPipeline/rootbootstrap-pipeline-thy/Role/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "rootbootstrappipelinethyRole6567298B"
           }
         ],
-        "/RootPipelineStack/rootbootstrap-pipeline-thy/Role/DefaultPolicy/Resource": [
+        "/RootPipeline/rootbootstrap-pipeline-thy/Role/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "rootbootstrappipelinethyRoleDefaultPolicyD77981B9"
           }
         ],
-        "/RootPipelineStack/rootbootstrap-pipeline-thy/Resource": [
+        "/RootPipeline/rootbootstrap-pipeline-thy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "rootbootstrappipelinethy212D06C0"
           }
         ],
-        "/RootPipelineStack/rootbootstrap-pipeline-thy/Source/master-on-commit/CodePipelineActionRole/Resource": [
+        "/RootPipeline/rootbootstrap-pipeline-thy/Source/master-on-commit/CodePipelineActionRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "rootbootstrappipelinethySourcemasteroncommitCodePipelineActionRoleFF4F6902"
           }
         ],
-        "/RootPipelineStack/rootbootstrap-pipeline-thy/Source/master-on-commit/CodePipelineActionRole/DefaultPolicy/Resource": [
+        "/RootPipeline/rootbootstrap-pipeline-thy/Source/master-on-commit/CodePipelineActionRole/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "rootbootstrappipelinethySourcemasteroncommitCodePipelineActionRoleDefaultPolicy3A71EC60"
           }
         ],
-        "/RootPipelineStack/rootbootstrap-pipeline-thy/EventsRole/Resource": [
+        "/RootPipeline/rootbootstrap-pipeline-thy/EventsRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "rootbootstrappipelinethyEventsRole844293BE"
           }
         ],
-        "/RootPipelineStack/rootbootstrap-pipeline-thy/EventsRole/DefaultPolicy/Resource": [
+        "/RootPipeline/rootbootstrap-pipeline-thy/EventsRole/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "rootbootstrappipelinethyEventsRoleDefaultPolicyB1340231"
           }
         ],
-        "/RootPipelineStack/rootbootstrap-pipeline-thy/Build/CodeBuild/CodePipelineActionRole/Resource": [
+        "/RootPipeline/rootbootstrap-pipeline-thy/Build/CodeBuild/CodePipelineActionRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "rootbootstrappipelinethyBuildCodeBuildCodePipelineActionRoleAAEB4925"
           }
         ],
-        "/RootPipelineStack/rootbootstrap-pipeline-thy/Build/CodeBuild/CodePipelineActionRole/DefaultPolicy/Resource": [
+        "/RootPipeline/rootbootstrap-pipeline-thy/Build/CodeBuild/CodePipelineActionRole/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "rootbootstrappipelinethyBuildCodeBuildCodePipelineActionRoleDefaultPolicyF501C0BC"
           }
         ],
-        "/RootPipelineStack/rootbootstrap-cb-thy/Role/Resource": [
+        "/RootPipeline/rootbootstrap-cb-thy/Role/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "rootbootstrapcbthyRoleB6A413F7"
           }
         ],
-        "/RootPipelineStack/rootbootstrap-cb-thy/Role/DefaultPolicy/Resource": [
+        "/RootPipeline/rootbootstrap-cb-thy/Role/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "rootbootstrapcbthyRoleDefaultPolicy7EF793E4"
           }
         ],
-        "/RootPipelineStack/rootbootstrap-cb-thy/Resource": [
+        "/RootPipeline/rootbootstrap-cb-thy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "rootbootstrapcbthyD2B5E7A1"
           }
         ],
-        "/RootPipelineStack/CDKMetadata/Default": [
+        "/RootPipeline/CDKMetadata/Default": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadata"
           }
         ],
-        "/RootPipelineStack/CDKMetadata/Condition": [
+        "/RootPipeline/CDKMetadata/Condition": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadataAvailable"
           }
         ],
-        "/RootPipelineStack/BootstrapVersion": [
+        "/RootPipeline/BootstrapVersion": [
           {
             "type": "aws:cdk:logicalId",
             "data": "BootstrapVersion"
           }
         ],
-        "/RootPipelineStack/CheckBootstrapVersion": [
+        "/RootPipeline/CheckBootstrapVersion": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CheckBootstrapVersion"
           }
         ]
       },
-      "displayName": "RootPipelineStack"
+      "displayName": "RootPipeline"
     },
     "Tree": {
       "type": "cdk:tree",

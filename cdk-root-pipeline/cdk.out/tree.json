@@ -4,17 +4,17 @@
     "id": "App",
     "path": "",
     "children": {
-      "RootPipelineStack": {
-        "id": "RootPipelineStack",
-        "path": "RootPipelineStack",
+      "RootPipeline": {
+        "id": "RootPipeline",
+        "path": "RootPipeline",
         "children": {
           "rootbootstrap-repo-thy": {
             "id": "rootbootstrap-repo-thy",
-            "path": "RootPipelineStack/rootbootstrap-repo-thy",
+            "path": "RootPipeline/rootbootstrap-repo-thy",
             "children": {
               "Resource": {
                 "id": "Resource",
-                "path": "RootPipelineStack/rootbootstrap-repo-thy/Resource",
+                "path": "RootPipeline/rootbootstrap-repo-thy/Resource",
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::CodeCommit::Repository",
                   "aws:cdk:cloudformation:props": {
@@ -27,13 +27,13 @@
                   "version": "2.63.2"
                 }
               },
-              "RootPipelineStackrootbootstrappipelinethyDBA3C33AEventRule": {
-                "id": "RootPipelineStackrootbootstrappipelinethyDBA3C33AEventRule",
-                "path": "RootPipelineStack/rootbootstrap-repo-thy/RootPipelineStackrootbootstrappipelinethyDBA3C33AEventRule",
+              "RootPipelinerootbootstrappipelinethyE6CCCCF2EventRule": {
+                "id": "RootPipelinerootbootstrappipelinethyE6CCCCF2EventRule",
+                "path": "RootPipeline/rootbootstrap-repo-thy/RootPipelinerootbootstrappipelinethyE6CCCCF2EventRule",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "RootPipelineStack/rootbootstrap-repo-thy/RootPipelineStackrootbootstrappipelinethyDBA3C33AEventRule/Resource",
+                    "path": "RootPipeline/rootbootstrap-repo-thy/RootPipelinerootbootstrappipelinethyE6CCCCF2EventRule/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::Events::Rule",
                       "aws:cdk:cloudformation:props": {
@@ -118,15 +118,15 @@
           },
           "rootbootstrap-pipeline-thy": {
             "id": "rootbootstrap-pipeline-thy",
-            "path": "RootPipelineStack/rootbootstrap-pipeline-thy",
+            "path": "RootPipeline/rootbootstrap-pipeline-thy",
             "children": {
               "ArtifactsBucket": {
                 "id": "ArtifactsBucket",
-                "path": "RootPipelineStack/rootbootstrap-pipeline-thy/ArtifactsBucket",
+                "path": "RootPipeline/rootbootstrap-pipeline-thy/ArtifactsBucket",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "RootPipelineStack/rootbootstrap-pipeline-thy/ArtifactsBucket/Resource",
+                    "path": "RootPipeline/rootbootstrap-pipeline-thy/ArtifactsBucket/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
                       "aws:cdk:cloudformation:props": {
@@ -154,11 +154,11 @@
                   },
                   "Policy": {
                     "id": "Policy",
-                    "path": "RootPipelineStack/rootbootstrap-pipeline-thy/ArtifactsBucket/Policy",
+                    "path": "RootPipeline/rootbootstrap-pipeline-thy/ArtifactsBucket/Policy",
                     "children": {
                       "Resource": {
                         "id": "Resource",
-                        "path": "RootPipelineStack/rootbootstrap-pipeline-thy/ArtifactsBucket/Policy/Resource",
+                        "path": "RootPipeline/rootbootstrap-pipeline-thy/ArtifactsBucket/Policy/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::S3::BucketPolicy",
                           "aws:cdk:cloudformation:props": {
@@ -225,11 +225,11 @@
               },
               "Role": {
                 "id": "Role",
-                "path": "RootPipelineStack/rootbootstrap-pipeline-thy/Role",
+                "path": "RootPipeline/rootbootstrap-pipeline-thy/Role",
                 "children": {
                   "ImportRole": {
                     "id": "ImportRole",
-                    "path": "RootPipelineStack/rootbootstrap-pipeline-thy/Role/ImportRole",
+                    "path": "RootPipeline/rootbootstrap-pipeline-thy/Role/ImportRole",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.Resource",
                       "version": "2.63.2"
@@ -237,7 +237,7 @@
                   },
                   "Resource": {
                     "id": "Resource",
-                    "path": "RootPipelineStack/rootbootstrap-pipeline-thy/Role/Resource",
+                    "path": "RootPipeline/rootbootstrap-pipeline-thy/Role/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::IAM::Role",
                       "aws:cdk:cloudformation:props": {
@@ -262,11 +262,11 @@
                   },
                   "DefaultPolicy": {
                     "id": "DefaultPolicy",
-                    "path": "RootPipelineStack/rootbootstrap-pipeline-thy/Role/DefaultPolicy",
+                    "path": "RootPipeline/rootbootstrap-pipeline-thy/Role/DefaultPolicy",
                     "children": {
                       "Resource": {
                         "id": "Resource",
-                        "path": "RootPipelineStack/rootbootstrap-pipeline-thy/Role/DefaultPolicy/Resource",
+                        "path": "RootPipeline/rootbootstrap-pipeline-thy/Role/DefaultPolicy/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
                           "aws:cdk:cloudformation:props": {
@@ -357,7 +357,7 @@
               },
               "Resource": {
                 "id": "Resource",
-                "path": "RootPipelineStack/rootbootstrap-pipeline-thy/Resource",
+                "path": "RootPipeline/rootbootstrap-pipeline-thy/Resource",
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::CodePipeline::Pipeline",
                   "aws:cdk:cloudformation:props": {
@@ -457,19 +457,19 @@
               },
               "Source": {
                 "id": "Source",
-                "path": "RootPipelineStack/rootbootstrap-pipeline-thy/Source",
+                "path": "RootPipeline/rootbootstrap-pipeline-thy/Source",
                 "children": {
                   "master-on-commit": {
                     "id": "master-on-commit",
-                    "path": "RootPipelineStack/rootbootstrap-pipeline-thy/Source/master-on-commit",
+                    "path": "RootPipeline/rootbootstrap-pipeline-thy/Source/master-on-commit",
                     "children": {
                       "CodePipelineActionRole": {
                         "id": "CodePipelineActionRole",
-                        "path": "RootPipelineStack/rootbootstrap-pipeline-thy/Source/master-on-commit/CodePipelineActionRole",
+                        "path": "RootPipeline/rootbootstrap-pipeline-thy/Source/master-on-commit/CodePipelineActionRole",
                         "children": {
                           "ImportCodePipelineActionRole": {
                             "id": "ImportCodePipelineActionRole",
-                            "path": "RootPipelineStack/rootbootstrap-pipeline-thy/Source/master-on-commit/CodePipelineActionRole/ImportCodePipelineActionRole",
+                            "path": "RootPipeline/rootbootstrap-pipeline-thy/Source/master-on-commit/CodePipelineActionRole/ImportCodePipelineActionRole",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.Resource",
                               "version": "2.63.2"
@@ -477,7 +477,7 @@
                           },
                           "Resource": {
                             "id": "Resource",
-                            "path": "RootPipelineStack/rootbootstrap-pipeline-thy/Source/master-on-commit/CodePipelineActionRole/Resource",
+                            "path": "RootPipeline/rootbootstrap-pipeline-thy/Source/master-on-commit/CodePipelineActionRole/Resource",
                             "attributes": {
                               "aws:cdk:cloudformation:type": "AWS::IAM::Role",
                               "aws:cdk:cloudformation:props": {
@@ -517,11 +517,11 @@
                           },
                           "DefaultPolicy": {
                             "id": "DefaultPolicy",
-                            "path": "RootPipelineStack/rootbootstrap-pipeline-thy/Source/master-on-commit/CodePipelineActionRole/DefaultPolicy",
+                            "path": "RootPipeline/rootbootstrap-pipeline-thy/Source/master-on-commit/CodePipelineActionRole/DefaultPolicy",
                             "children": {
                               "Resource": {
                                 "id": "Resource",
-                                "path": "RootPipelineStack/rootbootstrap-pipeline-thy/Source/master-on-commit/CodePipelineActionRole/DefaultPolicy/Resource",
+                                "path": "RootPipeline/rootbootstrap-pipeline-thy/Source/master-on-commit/CodePipelineActionRole/DefaultPolicy/Resource",
                                 "attributes": {
                                   "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
                                   "aws:cdk:cloudformation:props": {
@@ -622,11 +622,11 @@
               },
               "EventsRole": {
                 "id": "EventsRole",
-                "path": "RootPipelineStack/rootbootstrap-pipeline-thy/EventsRole",
+                "path": "RootPipeline/rootbootstrap-pipeline-thy/EventsRole",
                 "children": {
                   "ImportEventsRole": {
                     "id": "ImportEventsRole",
-                    "path": "RootPipelineStack/rootbootstrap-pipeline-thy/EventsRole/ImportEventsRole",
+                    "path": "RootPipeline/rootbootstrap-pipeline-thy/EventsRole/ImportEventsRole",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.Resource",
                       "version": "2.63.2"
@@ -634,7 +634,7 @@
                   },
                   "Resource": {
                     "id": "Resource",
-                    "path": "RootPipelineStack/rootbootstrap-pipeline-thy/EventsRole/Resource",
+                    "path": "RootPipeline/rootbootstrap-pipeline-thy/EventsRole/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::IAM::Role",
                       "aws:cdk:cloudformation:props": {
@@ -659,11 +659,11 @@
                   },
                   "DefaultPolicy": {
                     "id": "DefaultPolicy",
-                    "path": "RootPipelineStack/rootbootstrap-pipeline-thy/EventsRole/DefaultPolicy",
+                    "path": "RootPipeline/rootbootstrap-pipeline-thy/EventsRole/DefaultPolicy",
                     "children": {
                       "Resource": {
                         "id": "Resource",
-                        "path": "RootPipelineStack/rootbootstrap-pipeline-thy/EventsRole/DefaultPolicy/Resource",
+                        "path": "RootPipeline/rootbootstrap-pipeline-thy/EventsRole/DefaultPolicy/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
                           "aws:cdk:cloudformation:props": {
@@ -726,19 +726,19 @@
               },
               "Build": {
                 "id": "Build",
-                "path": "RootPipelineStack/rootbootstrap-pipeline-thy/Build",
+                "path": "RootPipeline/rootbootstrap-pipeline-thy/Build",
                 "children": {
                   "CodeBuild": {
                     "id": "CodeBuild",
-                    "path": "RootPipelineStack/rootbootstrap-pipeline-thy/Build/CodeBuild",
+                    "path": "RootPipeline/rootbootstrap-pipeline-thy/Build/CodeBuild",
                     "children": {
                       "CodePipelineActionRole": {
                         "id": "CodePipelineActionRole",
-                        "path": "RootPipelineStack/rootbootstrap-pipeline-thy/Build/CodeBuild/CodePipelineActionRole",
+                        "path": "RootPipeline/rootbootstrap-pipeline-thy/Build/CodeBuild/CodePipelineActionRole",
                         "children": {
                           "ImportCodePipelineActionRole": {
                             "id": "ImportCodePipelineActionRole",
-                            "path": "RootPipelineStack/rootbootstrap-pipeline-thy/Build/CodeBuild/CodePipelineActionRole/ImportCodePipelineActionRole",
+                            "path": "RootPipeline/rootbootstrap-pipeline-thy/Build/CodeBuild/CodePipelineActionRole/ImportCodePipelineActionRole",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.Resource",
                               "version": "2.63.2"
@@ -746,7 +746,7 @@
                           },
                           "Resource": {
                             "id": "Resource",
-                            "path": "RootPipelineStack/rootbootstrap-pipeline-thy/Build/CodeBuild/CodePipelineActionRole/Resource",
+                            "path": "RootPipeline/rootbootstrap-pipeline-thy/Build/CodeBuild/CodePipelineActionRole/Resource",
                             "attributes": {
                               "aws:cdk:cloudformation:type": "AWS::IAM::Role",
                               "aws:cdk:cloudformation:props": {
@@ -786,11 +786,11 @@
                           },
                           "DefaultPolicy": {
                             "id": "DefaultPolicy",
-                            "path": "RootPipelineStack/rootbootstrap-pipeline-thy/Build/CodeBuild/CodePipelineActionRole/DefaultPolicy",
+                            "path": "RootPipeline/rootbootstrap-pipeline-thy/Build/CodeBuild/CodePipelineActionRole/DefaultPolicy",
                             "children": {
                               "Resource": {
                                 "id": "Resource",
-                                "path": "RootPipelineStack/rootbootstrap-pipeline-thy/Build/CodeBuild/CodePipelineActionRole/DefaultPolicy/Resource",
+                                "path": "RootPipeline/rootbootstrap-pipeline-thy/Build/CodeBuild/CodePipelineActionRole/DefaultPolicy/Resource",
                                 "attributes": {
                                   "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
                                   "aws:cdk:cloudformation:props": {
@@ -858,15 +858,15 @@
           },
           "rootbootstrap-cb-thy": {
             "id": "rootbootstrap-cb-thy",
-            "path": "RootPipelineStack/rootbootstrap-cb-thy",
+            "path": "RootPipeline/rootbootstrap-cb-thy",
             "children": {
               "Role": {
                 "id": "Role",
-                "path": "RootPipelineStack/rootbootstrap-cb-thy/Role",
+                "path": "RootPipeline/rootbootstrap-cb-thy/Role",
                 "children": {
                   "ImportRole": {
                     "id": "ImportRole",
-                    "path": "RootPipelineStack/rootbootstrap-cb-thy/Role/ImportRole",
+                    "path": "RootPipeline/rootbootstrap-cb-thy/Role/ImportRole",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.Resource",
                       "version": "2.63.2"
@@ -874,7 +874,7 @@
                   },
                   "Resource": {
                     "id": "Resource",
-                    "path": "RootPipelineStack/rootbootstrap-cb-thy/Role/Resource",
+                    "path": "RootPipeline/rootbootstrap-cb-thy/Role/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::IAM::Role",
                       "aws:cdk:cloudformation:props": {
@@ -899,11 +899,11 @@
                   },
                   "DefaultPolicy": {
                     "id": "DefaultPolicy",
-                    "path": "RootPipelineStack/rootbootstrap-cb-thy/Role/DefaultPolicy",
+                    "path": "RootPipeline/rootbootstrap-cb-thy/Role/DefaultPolicy",
                     "children": {
                       "Resource": {
                         "id": "Resource",
-                        "path": "RootPipelineStack/rootbootstrap-cb-thy/Role/DefaultPolicy/Resource",
+                        "path": "RootPipeline/rootbootstrap-cb-thy/Role/DefaultPolicy/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
                           "aws:cdk:cloudformation:props": {
@@ -1072,7 +1072,7 @@
               },
               "Resource": {
                 "id": "Resource",
-                "path": "RootPipelineStack/rootbootstrap-cb-thy/Resource",
+                "path": "RootPipeline/rootbootstrap-cb-thy/Resource",
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::CodeBuild::Project",
                   "aws:cdk:cloudformation:props": {
@@ -1116,11 +1116,11 @@
           },
           "CDKMetadata": {
             "id": "CDKMetadata",
-            "path": "RootPipelineStack/CDKMetadata",
+            "path": "RootPipeline/CDKMetadata",
             "children": {
               "Default": {
                 "id": "Default",
-                "path": "RootPipelineStack/CDKMetadata/Default",
+                "path": "RootPipeline/CDKMetadata/Default",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnResource",
                   "version": "2.63.2"
@@ -1128,7 +1128,7 @@
               },
               "Condition": {
                 "id": "Condition",
-                "path": "RootPipelineStack/CDKMetadata/Condition",
+                "path": "RootPipeline/CDKMetadata/Condition",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnCondition",
                   "version": "2.63.2"
@@ -1142,7 +1142,7 @@
           },
           "BootstrapVersion": {
             "id": "BootstrapVersion",
-            "path": "RootPipelineStack/BootstrapVersion",
+            "path": "RootPipeline/BootstrapVersion",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnParameter",
               "version": "2.63.2"
@@ -1150,7 +1150,7 @@
           },
           "CheckBootstrapVersion": {
             "id": "CheckBootstrapVersion",
-            "path": "RootPipelineStack/CheckBootstrapVersion",
+            "path": "RootPipeline/CheckBootstrapVersion",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnRule",
               "version": "2.63.2"

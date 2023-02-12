@@ -3,11 +3,10 @@ import os
 
 import aws_cdk as cdk
 
-#from cdk_root_pipeline.component_config import ComponentConfig
-from cdk_root_pipeline.cdk_root_pipeline_stack import CdkRootPipelineStack
+from cdk_root_pipeline.infrastructure import RootPipeline
 
 app = cdk.App()
-CdkRootPipelineStack(app, "RootPipelineStack",
+RootPipeline(app, "RootPipeline",
                      # If you don't specify 'env', this stack will be environment-agnostic.
                      # Account/Region-dependent features and context lookups will not work,
                      # but a single synthesized template can be deployed anywhere.
